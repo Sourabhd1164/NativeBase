@@ -210,9 +210,11 @@ class Item extends Component {
         <Animated.View
           key="float"
           style={{
+            flex: 1,
+            flexDirection: 'column',
             position: 'absolute',
             left: this.props.last ? 15 : 0,
-            right: 0,
+            // right: 0,
             top: this.state.topAnim,
             opacity: this.state.opacAnim,
             paddingTop: Platform.OS === 'ios' ? undefined : undefined,
@@ -221,6 +223,7 @@ class Item extends Component {
         >
           <Label {...labelProps}>
             {this.renderLabel(label, labelProps) + 'blah'}
+            {'yes'}
           </Label>
         </Animated.View>
       )
